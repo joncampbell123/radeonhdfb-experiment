@@ -1,0 +1,6 @@
+Jonathan's attempt at a functional framebuffer driver for Linux
+for Radeon HD cards (R500/R600 based stuff) since the current
+driver is apparently lacking this functionality.
+
+Also good for a programming exercise...
+

@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# Where is the kernel source.....
+
+# ISP general location
+if [ -d /buildenv/isp/kernel ]; then
+	echo "/buildenv/isp/kernel"
+	exit 0;
+fi
+
+# ISP desktop linux
+if [ -d /buildenv/ispdesk/linux-2.6.21.5 ]; then
+	echo "/buildenv/ispdesk/linux-2.6.21.5"
+	exit 0;
+fi
+
+# ISP tv linux
+if [ -d /buildenv/isp/linux-2.6.24.2 ]; then
+	echo "/buildenv/isp/linux-2.6.24.2"
+	exit 0;
+fi
+
+# ISP tv linux
+if [ -d /buildenv/isp/linux-2.6.21.1 ]; then
+	echo "/buildenv/isp/linux-2.6.21.1"
+	exit 0;
+fi
+
+# the usual place in most Linux distros #1
+if [ -d "/lib/modules/`uname -r`/build" ]; then
+	echo "/lib/modules/`uname -r`/build"
+	exit 0;
+fi
+
+# usual place #2
+if [ -d /usr/src/linux ]; then
+	echo "/usr/src/linux"
+	exit 0;
+fi
+
+# I don't know!
+exit 1;
